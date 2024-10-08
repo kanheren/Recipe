@@ -14,6 +14,7 @@
 		881F89D02CB4DE60004399BF /* NetworkContextFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F89CF2CB4DE60004399BF /* NetworkContextFactoryMock.swift */; };
 		881F89D32CB4DEFF004399BF /* RecipeViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F89D22CB4DEFF004399BF /* RecipeViewControllerMock.swift */; };
 		881F89D52CB4DF1C004399BF /* RecipeViewController_PresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881F89D42CB4DF1C004399BF /* RecipeViewController_PresenterTest.swift */; };
+		888B82032CB5BD7200085688 /* RecipeSearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888B82022CB5BD7200085688 /* RecipeSearchBar+Extension.swift */; };
 		88D6F0D22CB4463F00B54B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6F0D12CB4463F00B54B14 /* AppDelegate.swift */; };
 		88D6F0D42CB4463F00B54B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6F0D32CB4463F00B54B14 /* SceneDelegate.swift */; };
 		88D6F0D92CB4463F00B54B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D6F0D72CB4463F00B54B14 /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 		881F89CF2CB4DE60004399BF /* NetworkContextFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContextFactoryMock.swift; sourceTree = "<group>"; };
 		881F89D22CB4DEFF004399BF /* RecipeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerMock.swift; sourceTree = "<group>"; };
 		881F89D42CB4DF1C004399BF /* RecipeViewController_PresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController_PresenterTest.swift; sourceTree = "<group>"; };
+		888B82022CB5BD7200085688 /* RecipeSearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeSearchBar+Extension.swift"; sourceTree = "<group>"; };
 		88D6F0CE2CB4463F00B54B14 /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D6F0D12CB4463F00B54B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D6F0D32CB4463F00B54B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				88D82C862CB4821800B12FBA /* RecipeTableViewCell */,
 				88D6F1432CB4715500B54B14 /* RecipeViewController.swift */,
 				88D82C842CB481BB00B12FBA /* RecipeTableView+Extension.swift */,
+				888B82022CB5BD7200085688 /* RecipeSearchBar+Extension.swift */,
 				88D6F1452CB4722700B54B14 /* RecipeViewController_Presenter.swift */,
 				88D82C8D2CB4A02400B12FBA /* RecipeDetailsViewController.swift */,
 			);
@@ -592,6 +595,7 @@
 				88D6F1462CB4722700B54B14 /* RecipeViewController_Presenter.swift in Sources */,
 				88D6F1182CB463EE00B54B14 /* NetworkManager.swift in Sources */,
 				88D6F1102CB460B900B54B14 /* GetRecipeServiceController.swift in Sources */,
+				888B82032CB5BD7200085688 /* RecipeSearchBar+Extension.swift in Sources */,
 				88D6F1352CB46A5D00B54B14 /* NetworkUtility.swift in Sources */,
 				88D82C892CB4825E00B12FBA /* RecipeTableViewCell.swift in Sources */,
 				88D6F1442CB4715500B54B14 /* RecipeViewController.swift in Sources */,

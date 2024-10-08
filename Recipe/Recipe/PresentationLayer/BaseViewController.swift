@@ -12,7 +12,9 @@ protocol BaseViewController_Protocol {
 }
 
 class BaseViewController: UIViewController, BaseViewController_Protocol {
+    var keyboardSize: CGRect?
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     // iOS device screen width.
     public var screenWidth: CGFloat { return UIScreen.main.bounds.width}
     // iOS device screen height.
@@ -22,6 +24,17 @@ class BaseViewController: UIViewController, BaseViewController_Protocol {
         super.viewDidLoad()
 
         setUpNavigationBar()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), 
+                                               name: UIResponder.keyboardWillShowNotification, object: view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), 
+                                               name: UIResponder.keyboardWillHideNotification, object: view.window)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: view.window)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: view.window)
     }
     func setUpNavigationBar() {
         navigationItem.hidesBackButton = true
@@ -45,6 +58,20 @@ class BaseViewController: UIViewController, BaseViewController_Protocol {
             UIGraphicsEndImageContext()
             debugPrint("Image not available")
          }
+    }
+    // MARK: - Keyboard Notifications
+    @objc
+    func keyboardWillShow(_ notification: Notification) {
+        // get the size of the keyboard
+        let userInfo = notification.userInfo!
+        keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+    }
+
+    @objc
+    func keyboardWillHide(_ notification: Notification) {
+        // get the size of the keyboard
+        let userInfo = notification.userInfo!
+        keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
     }
 
 }

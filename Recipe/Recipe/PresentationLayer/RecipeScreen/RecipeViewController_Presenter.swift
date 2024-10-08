@@ -11,6 +11,7 @@ import UIKit
 protocol RecipeViewController_PresenterProtocol: AnyObject {
     func getRecipeDataModel() -> [RecipeStruct.RecipesData]
     func getRecipeDataModelCount() -> Int
+    func getRecipeRequest()
 }
 
 class RecipeViewController_Presenter: RecipeViewController_PresenterProtocol {
@@ -25,7 +26,7 @@ class RecipeViewController_Presenter: RecipeViewController_PresenterProtocol {
         self.viewController = viewController
         getRecipeRequest()
     }
-    private func getRecipeRequest() {
+    func getRecipeRequest() {
         let request = RecipeStruct.Request()
         AppEnvironment.current.getRecipeUseCase.getRecipeResuest(request: request,
                                                                  completion: { [] result in

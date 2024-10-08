@@ -23,7 +23,7 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
                             forCellReuseIdentifier: "RecipeTableViewCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.getRecipeDataModelCount() ?? 0
+        return filteredRecipeDataModel.count
     }
     func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         120.0
@@ -31,13 +31,13 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeTableViewCell",
                                                     for: indexPath) as? RecipeTableViewCell {
-            let recipe = presenter?.getRecipeDataModel()[indexPath.row]
+            let recipe = filteredRecipeDataModel[indexPath.row]
            
-            cell.countryName.text = recipe?.cuisine
-            cell.cuisineName.text = recipe?.name
-            cell.imageName.downloaded(from: recipe?.photo_url_small ?? "")
+            cell.countryName.text = recipe.cuisine
+            cell.cuisineName.text = recipe.name
+            cell.imageName.downloaded(from: recipe.photo_url_small ?? "")
             
-            let tempCount = presenter?.getRecipeDataModelCount() ?? 0
+            let tempCount = filteredRecipeDataModel.count
             if indexPath.row == tempCount - 1 {
                 cell.separatorView.isHidden = true
 
