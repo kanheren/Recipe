@@ -24,5 +24,6 @@ This README would normally document whatever steps are necessary to get your app
 * None
 
 # Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered.
-* Added bare minimum XC test and XCUI test to show concept of TDD and test automation 
+* Added bare minimum XC test and XCUI test to show concept of TDD and test automation
+  ![Image](https://github.com/user-attachments/assets/026f69a0-c784-4b66-8b17-ccb880296af5)
 
